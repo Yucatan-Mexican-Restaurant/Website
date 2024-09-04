@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | Yucatan Mexian Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href='#'><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#000000">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </a>
+            </li>
+            <li><a href="#">Rewards</a></li>
+            <li><a href='#'>About us</a></li>
+            <li><a href='#'>Contact us</a></li>
+        </ul>
+
+        <ul>
+            <li><a href="index.html">
+                    <img src="images/logo2.jpg" alt="Logo" class="logo-image"></a></li>
+            <li class="hideOnMobile"><a href="menu.html">MENU</a></li>
+            <li class="hideOnMobile"><a href="location.html">LOCATION</a></li>
+        </ul>
+    </nav>
+
+
+    <h2 class="menu-title">SANDWICHES</h2>
+
+    <div class="menu-item-page">
+
+        <p>
+            <span class="menu-item">Yucatan Burger</span>
+            <span class="dots"></span>
+            <span class="menu-price">$7.99</span><br>
+        </p>
+        <p>
+            <span class="menu-description">Grilled to your taste and garnished with lettuce, tomato, onions, and
+                pickles. Served with French fries and sliced avocados.</span>
+        </p>
+
+        <p>
+            <span class="menu-item">Cheese Burger</span>
+            <span class="dots"></span>
+            <span class="menu-price">$6.99</span><br>
+        </p>
+        <p>
+            <span class="menu-description">Served with French fries and garnished with lettuce and tomato.</span>
+        </p>
+
+        <p>
+            <span class="menu-item">Chicken Sandwich w/cheese sauce</span>
+            <span class="dots"></span>
+            <span class="menu-price">$7.99</span><br>
+        </p>
+        <p>
+            <span class="menu-description">Boneless breast of chicken, grilled and topped with cheese sauce and
+                garnished with lettuce, tomato, and onion.</span>
+        </p>
+
+
+    </div>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>200 Sandifer Ln</p>
+                <p>Pineville, LA 71360</p>
+                <p>(318) 448-4424</p>
+            </div>
+            <img src="images/full-logo.jpg" alt="Logo" class="footer-logo">
+        </div>
+    </footer>
+
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>
