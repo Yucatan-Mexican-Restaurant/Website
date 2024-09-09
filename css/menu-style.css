@@ -410,6 +410,14 @@ nav li:first-child {
     transform: scale(1.1);
 }
 
+.street-tacos-image:hover {
+    transform: scale(1.1);
+}
+
+.side-orders-image:hover {
+    transform: scale(1.1);
+}
+
 .sandwiches-image:hover {
     transform: scale(1.1);
 }
