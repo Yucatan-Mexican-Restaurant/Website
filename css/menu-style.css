@@ -205,8 +205,9 @@ nav li:first-child {
 /*menu grid for smaller screens*/
 @media (max-width: 800px) {
     .menu-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
         gap: 10px 20px; /* Adjust the gap between items */
+        padding: 10px; /* Add padding to give some space around the menu */
     }
 
     .menu-placeholder,
@@ -220,10 +221,43 @@ nav li:first-child {
     .combo-dinner-image,
     .kids-menu-image,
     .desserts-image {
-        width: 100px; /* Adjust the width for smaller screens */
-        height: 75px; /* Adjust the height for smaller screens */
+        width: 100px;  /* Set the image width for mobile */
+        height: auto;  /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure images fit within their containers */
+        margin: 0 auto; /* Center images within their grid item */
+    }
+
+    /* Adjust the grid item itself to ensure it adapts to the screen */
+    .menu-grid-item {
+        padding: 10px; /* Add padding for grid items */
+        text-align: center; /* Center text under images */
+    }
+
+    /* Adjust text and font size under images for smaller screens */
+    .menu-grid-item h3 {
+        font-size: 1rem; /* Smaller font for mobile */
+    }
+    
+    /* Optional: Reduce padding/margins for other elements on mobile */
+    .site-footer,
+    .top-center-text,
+    .notice-statement {
+        padding: 10px; /* Adjust padding */
+        font-size: 1rem; /* Adjust text size for mobile */
+    }
+
+    .logo {
+        max-width: 80%; /* Logo adjusts responsively */
+        height: auto;
+        margin: 0 auto; /* Center logo */
+    }
+
+    .footer-logo {
+        max-width: 80px; /* Smaller logo in footer */
+        height: auto;
     }
 }
+
 
 
 .menu-dish {
