@@ -186,59 +186,39 @@ nav li:first-child {
     margin-top: 150px;
 }
 
-/*menu grid for smaller screens*/
+/* Mobile Styles */
 @media (max-width: 800px) {
+    /* Menu container: 2 columns for tablet/mobile */
     .menu-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
-        gap: 10px 20px; /* Adjust the gap between items */
-        padding: 10px; /* Add padding to give some space around the menu */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px; 
+        padding: 10px;
     }
 
-    .menu-placeholder,
-    .yucatan-specials-image,
-    .lunch-specialties-image,
-    .sandwiches-image,
-    .appetizers-image,
-    .vegetarian-combination-image,
-    .seafood-image,
-    .express-lunch-image,
-    .combo-dinner-image,
-    .kids-menu-image,
-    .desserts-image {
-        width: 100px;  /* Set the image width for mobile */
+    /* Image placeholders: reduce size on mobile */
+    .menu-dish img {
+        width: 100%;  /* Full width for images */
         height: auto;  /* Maintain aspect ratio */
         object-fit: cover; /* Ensure images fit within their containers */
-        margin: 0 auto; /* Center images within their grid item */
+        margin: 0 auto; /* Center images */
     }
 
-    /* Adjust the grid item itself to ensure it adapts to the screen */
-    .menu-grid-item {
-        padding: 10px; /* Add padding for grid items */
-        text-align: center; /* Center text under images */
+    /* Text adjustments */
+    .menu-name {
+        font-size: 1rem; /* Smaller font size for mobile */
+        padding: 5px 0;
     }
 
-    /* Adjust text and font size under images for smaller screens */
-    .menu-grid-item h3 {
-        font-size: 1rem; /* Smaller font for mobile */
-    }
-    
-    /* Optional: Reduce padding/margins for other elements on mobile */
-    .site-footer,
-    .top-center-text,
-    .notice-statement {
-        padding: 10px; /* Adjust padding */
-        font-size: 1rem; /* Adjust text size for mobile */
-    }
-
-    .logo {
-        max-width: 80%; /* Logo adjusts responsively */
-        height: auto;
-        margin: 0 auto; /* Center logo */
+    /* Footer adjustments */
+    .site-footer {
+        padding: 15px;
+        text-align: center; /* Center footer content */
     }
 
     .footer-logo {
-        max-width: 80px; /* Smaller logo in footer */
+        max-width: 80%; /* Ensure the logo adjusts */
         height: auto;
+        margin: 10px auto; 
     }
 }
 
