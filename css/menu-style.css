@@ -193,7 +193,7 @@ nav li:first-child {
         grid-template-columns: repeat(2, 1fr); 
         gap: 10px;  /* Reduced gap for better fit */
         padding: 10px;
-        width: 90%; /* Adjust to fit mobile screen */
+        width: 100%; /* Adjust to fit mobile screen */
         margin: 0 auto; /* Center the menu container */
     }
 
@@ -226,7 +226,7 @@ nav li:first-child {
     }
 
     .footer-logo {
-        max-width: 80%; /* Ensure the logo adjusts */
+        max-width: 100%; /* Ensure the logo adjusts */
         height: auto;
         margin: 10px auto; 
     }
@@ -520,7 +520,7 @@ nav li:first-child {
     margin-top: 20px;
     /* Space above the notice */
     border-radius: 5px;
-    max-width: 80%;
+    max-width: 100%;
     /* Limits the width of the notice */
     margin-left: auto;
     /* Center align the notice horizontally */
