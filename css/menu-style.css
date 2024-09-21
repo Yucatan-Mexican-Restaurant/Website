@@ -200,8 +200,14 @@ nav li:first-child {
     align-items: center;
     gap: 20px 40px;
     margin-top: 150px;
+}
 
-
+/*menu grid for smaller screens*/
+@media (max-width: 800px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on screens smaller than 800px */
+        gap: 20px 20px; /* Adjust gaps to make it look balanced on mobile */
+    }
 }
 
 .menu-dish {
