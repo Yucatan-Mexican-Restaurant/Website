@@ -205,10 +205,26 @@ nav li:first-child {
 /*menu grid for smaller screens*/
 @media (max-width: 800px) {
     .menu-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on screens smaller than 800px */
-        gap: 20px 20px; /* Adjust gaps to make it look balanced on mobile */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 10px 20px; /* Adjust the gap between items */
+    }
+
+    .menu-placeholder,
+    .yucatan-specials-image,
+    .lunch-specialties-image,
+    .sandwiches-image,
+    .appetizers-image,
+    .vegetarian-combination-image,
+    .seafood-image,
+    .express-lunch-image,
+    .combo-dinner-image,
+    .kids-menu-image,
+    .desserts-image {
+        width: 200px; /* Adjust the width for smaller screens */
+        height: 150px; /* Adjust the height for smaller screens */
     }
 }
+
 
 .menu-dish {
     text-align: center;
