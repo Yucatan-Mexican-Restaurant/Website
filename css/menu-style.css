@@ -220,8 +220,8 @@ nav li:first-child {
     .combo-dinner-image,
     .kids-menu-image,
     .desserts-image {
-        width: 200px; /* Adjust the width for smaller screens */
-        height: 150px; /* Adjust the height for smaller screens */
+        width: 100px; /* Adjust the width for smaller screens */
+        height: 75px; /* Adjust the height for smaller screens */
     }
 }
 
