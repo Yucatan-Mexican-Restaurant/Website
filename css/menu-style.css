@@ -1,7 +1,6 @@
-html, body {
-    height: 100%;
+/*all body*/
+body {
     margin: 0;
-    padding: 0;
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -104,6 +103,22 @@ nav li:first-child {
 }
 
 
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
 /*all footer*/
 .site-footer {
     background-image: url('woodfooter3.jpg');
@@ -167,9 +182,8 @@ nav li:first-child {
     transform: translateX(-50%);
     z-index: 10;
     width: 100%;
-    margin-top: 0;
+    margin-top: 60px;
 }
-
 
 .top-center-text h1 {
     font-family: "Alfa Slab One";
@@ -180,7 +194,6 @@ nav li:first-child {
 
 /*menu grid*/
 .menu-container {
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
@@ -189,72 +202,15 @@ nav li:first-child {
     margin-top: 150px;
 }
 
-/* Mobile Styles */
+/*menu grid for smaller screens*/
 @media (max-width: 800px) {
-    /* Menu container: 2 columns for tablet/mobile */
     .menu-container {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 10px;  /* Reduced gap for better fit */
-        padding: 10px;
-        width: 90%; /* Adjust to fit mobile screen */
-        margin: 0 auto; /* Center the menu container */
-    }
-
-    /* Image placeholders: reduce size on mobile */
-    .menu-dish img {
-        width: 100%;  /* Full width for images */
-        height: auto;  /* Maintain aspect ratio */
-        object-fit: cover; /* Ensure images fit within their containers */
-        margin: 0 auto; /* Center images */
-    }
-
-    /* Text adjustments */
-    .menu-name {
-        font-size: 1rem; /* Smaller font size for mobile */
-        padding: 5px 0;
-        text-align: center; /* Center text under images */
-    }
-
-    /* Footer adjustments */
-    .site-footer {
-        padding: 10px; /* Reduced padding for mobile */
-        text-align: center; /* Center footer content */
-    }
-
-    .footer-logo {
-        max-width: 80%; /* Ensure the logo adjusts */
-        height: auto;
-        margin: 10px auto; 
-    }
-
-    .notice {
-        display: none; /* Hides the notice on mobile */
-    }
-
-    /* Navigation adjustments */
-    nav {
-        padding: 10px; /* Adjust padding for mobile */
-    }
-
-    /* Adjust sidebar for mobile */
-    .sidebar {
-        flex-direction: row; /* Display items in a row */
-        justify-content: flex-end; /* Align items to the right */
-    }
-
-    /* Hide desktop-only items */
-    .hideOnMobile {
-        display: none; /* Ensure hidden on mobile */
-    }
-
-    /* Make menu items slightly larger for better touch targets */
-    nav ul li a {
-        font-size: 1.2em; /* Increased size for easier tapping */
-        padding: 8px 12px; /* More padding for better touch area */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on screens smaller than 800px */
+        gap: 20px 20px;
+        /* Adjust gaps to make it look balanced on mobile */
     }
 }
-
-
 
 .menu-dish {
     text-align: center;
@@ -367,36 +323,6 @@ nav li:first-child {
     transition: transform 0.3s ease;
 }
 
-.side-orders-image {
-    width: 325px;
-    height: 220px;
-    background-color: #ccc;
-    display: flex;
-    object-fit: cover;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 13px;
-    transition: transform 0.3s ease;
-}
-
-.street-tacos-image {
-    width: 325px;
-    height: 220px;
-    background-color: #ccc;
-    display: flex;
-    object-fit: cover;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 13px;
-    transition: transform 0.3s ease;
-}
-
 .express-lunch-image {
     width: 325px;
     height: 220px;
@@ -457,16 +383,39 @@ nav li:first-child {
     transition: transform 0.3s ease;
 }
 
+.side-orders-image {
+    width: 325px;
+    height: 220px;
+    background-color: #ccc;
+    display: flex;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 13px;
+    transition: transform 0.3s ease;
+}
+
+.street-tacos-image {
+    width: 325px;
+    height: 220px;
+    background-color: #ccc;
+    display: flex;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 13px;
+    transition: transform 0.3s ease;
+}
+
+
 
 .appetizers-image:hover {
-    transform: scale(1.1);
-}
-
-.street-tacos-image:hover {
-    transform: scale(1.1);
-}
-
-.side-orders-image:hover {
     transform: scale(1.1);
 }
 
