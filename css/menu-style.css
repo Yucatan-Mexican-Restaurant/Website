@@ -204,13 +204,61 @@ nav li:first-child {
 
 /*menu grid for smaller screens*/
 @media (max-width: 800px) {
+    /* Menu container: 2 columns for tablet/mobile */
     .menu-container {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columns on screens smaller than 800px */
-        gap: 20px 20px;
-        /* Adjust gaps to make it look balanced on mobile */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;  /* Reduced gap for better fit */
+        padding: 10px;
+        width: 90%; /* Adjust to fit mobile screen */
+        margin: 0 auto; /* Center the menu container */
     }
+
+    /* Image placeholders: reduce size on mobile */
+    .menu-dish img {
+        width: 100%;  /* Full width for images */
+        height: auto;  /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure images fit within their containers */
+        margin: 0 auto; /* Center images */
+    }
+
+    /* Text adjustments */
+    .menu-name {
+        font-size: 1rem; /* Smaller font size for mobile */
+        padding: 5px 0;
+        text-align: center; /* Center text under images */
+    }
+
+    /* Footer adjustments */
+    .site-footer {
+        padding: 10px; /* Reduced padding for mobile */
+        text-align: center; /* Center footer content */
+    }
+
+    .footer-logo {
+        max-width: 80%; /* Ensure the logo adjusts */
+        height: auto;
+        margin: 10px auto; 
+    }
+
+    .notice {
+        display: none; /* Hides the notice on mobile */
+    }
+
+    /* Navigation adjustments */
+    nav {
+        padding: 10px; /* Adjust padding for mobile */
+        display: flex; /* Ensure flexbox is applied */
+        justify-content: space-between; /* Space between logo and nav items */
+        align-items: center; /* Center items vertically */
+    }
+
+    /* Position logo on the left */
+    .logo-image {
+        margin-right: auto; /* Pushes nav items to the right */
+    }
+
 }
+
 
 .menu-dish {
     text-align: center;
