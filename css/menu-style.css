@@ -122,8 +122,6 @@ nav li:first-child {
     display: flex;
     justify-content: space-between;
     /* Aligns the text on the left and logo on the right */
-    align-items: center;
-    /* Vertically centers the content */
     max-width: 1200px;
     height: 100px;
     margin: 0 auto;
