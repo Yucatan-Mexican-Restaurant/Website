@@ -19,7 +19,7 @@ nav {
     font-weight: bold;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     box-sizing: border-box;
     border-bottom: 1px solid black;
 }
@@ -222,11 +222,21 @@ nav li:first-child {
         position: relative;
     }
 
+    .footer-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
     .footer-logo {
         max-width: 80%; /* Ensure the logo adjusts */
         height: auto;
         margin: 10px auto; 
     }
+
+    .footer-text {
+        font-size: 14px; /* Smaller font size for footer text */
+    }
+
 
     .notice {
         display: none; /* Hides the notice on mobile */
