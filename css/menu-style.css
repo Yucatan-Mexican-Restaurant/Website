@@ -216,8 +216,10 @@ nav li:first-child {
 
     /* Footer adjustments */
     .site-footer {
+        width: 100%;
         padding: 10px; /* Reduced padding for mobile */
         text-align: center; /* Center footer content */
+        position: relative;
     }
 
     .footer-logo {
@@ -232,8 +234,9 @@ nav li:first-child {
 
     /* Navigation adjustments */
     nav {
+        width: 100%; /* Full width */
         padding: 10px; /* Adjust padding for mobile */
-        display: flex; /* Ensure flexbox is applied */
+        display: flex; /* Flexbox layout */
         justify-content: space-between; /* Space between logo and nav items */
         align-items: center; /* Center items vertically */
     }
