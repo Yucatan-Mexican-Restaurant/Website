@@ -220,6 +220,10 @@ nav li:first-child {
         height: auto;
         margin: 10px auto; 
     }
+
+    .notice {
+        display: none; /* Hides the notice on mobile */
+    }
 }
 
 
