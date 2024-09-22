@@ -191,15 +191,16 @@ nav li:first-child {
     /* Menu container: 2 columns for tablet/mobile */
     .menu-container {
         grid-template-columns: repeat(2, 1fr); 
-        grid-gap: 10px;
+        grid-gap: 5px;
         gap: 10px;  /* Reduced gap for better fit */
         padding: 10px;
-        width: 95%; /* Adjust to fit mobile screen */
+        width: 87%; /* Adjust to fit mobile screen */
         margin: 0 auto; /* Center the menu container */
     }
 
      .menu-dish {
         width: 100%;
+        padding: 6px;
         font-size: 12px;
     }
 
