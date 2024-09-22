@@ -198,6 +198,23 @@ nav li:first-child {
         margin: 0 auto; /* Center the menu container */
     }
 
+    .menu-placeholder, 
+    .yucatan-specials-image,
+    .lunch-specialties-image,
+    .sandwiches-image,
+    .appetizers-image,
+    .vegetarian-combination-image,
+    .seafood-image,
+    .express-lunch-image,
+    .combo-dinner-image,
+    .kids-menu-image,
+    .desserts-image,
+    .side-orders-image,
+    .street-tacos-image {
+        width: 90%; /* Instead of fixed 325px */
+        height: auto;
+    }
+
      .menu-dish {
         width: 100%;
         padding: 6px;
