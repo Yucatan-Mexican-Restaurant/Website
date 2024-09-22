@@ -191,15 +191,17 @@ nav li:first-child {
     /* Menu container: 2 columns for tablet/mobile */
     .menu-container {
         grid-template-columns: repeat(2, 1fr); 
+        grid-gap: 10px;
+        max-width: 10px;
         gap: 10px;  /* Reduced gap for better fit */
         padding: 10px;
-        width: 100%; /* Adjust to fit mobile screen */
+        width: 95%; /* Adjust to fit mobile screen */
         margin: 0 auto; /* Center the menu container */
     }
 
     /* Image placeholders: reduce size on mobile */
     .menu-dish img {
-        width: 100%;  /* Full width for images */
+        max-width: 100%;  /* Full width for images */
         height: auto;  /* Maintain aspect ratio */
         object-fit: cover; /* Ensure images fit within their containers */
         margin: 0 auto; /* Center images */
@@ -207,7 +209,7 @@ nav li:first-child {
 
     /* Text adjustments */
     .menu-name {
-        font-size: 1rem; /* Smaller font size for mobile */
+        font-size: 14px; /* Smaller font size for mobile */
         padding: 5px 0;
         text-align: center; /* Center text under images */
     }
