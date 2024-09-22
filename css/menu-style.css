@@ -187,7 +187,7 @@ nav li:first-child {
 }
 
 /*menu grid for smaller screens*/
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
     /* Menu container: 2 columns for tablet/mobile */
     .menu-container {
         grid-template-columns: repeat(2, 1fr); 
@@ -203,6 +203,7 @@ nav li:first-child {
         padding: 6px;
         font-size: 12px;
     }
+
 
     /* Image placeholders: reduce size on mobile */
     .menu-dish img {
@@ -263,6 +264,22 @@ nav li:first-child {
 
 }
 
+
+/* For screens smaller than 768px (tablet and smaller) */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Reduce to 2 columns */
+        grid-gap: 10px;
+    }
+}
+
+/* For mobile screens smaller than 500px */
+@media (max-width: 500px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); /* One column per row for small screens */
+        grid-gap: 5px;
+    }
+}
 
 .menu-dish {
     text-align: center;
