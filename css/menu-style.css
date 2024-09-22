@@ -187,7 +187,7 @@ nav li:first-child {
 }
 
 /*menu grid for smaller screens*/
-@media (max-width: 1000px) {
+@media (max-width: 500px) {
     /* Menu container: 2 columns for tablet/mobile */
     .menu-container {
         grid-template-columns: repeat(2, 1fr); 
@@ -206,7 +206,7 @@ nav li:first-child {
 
     /* Image placeholders: reduce size on mobile */
     .menu-dish img {
-        max-width: 100%;  /* Full width for images */
+        width: 100%;  /* Full width for images */
         height: auto;  /* Maintain aspect ratio */
         object-fit: cover; /* Ensure images fit within their containers */
         margin: 0 auto; /* Center images */
