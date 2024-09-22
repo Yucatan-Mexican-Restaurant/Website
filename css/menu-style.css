@@ -198,6 +198,22 @@ nav li:first-child {
         margin: 0 auto; /* Center the menu container */
     }
 
+    .menu-placeholder:hover,
+    .yucatan-specials-image:hover,
+    .lunch-specialties-image:hover,
+    .sandwiches-image:hover,
+    .appetizers-image:hover,
+    .vegetarian-combination-image:hover,
+    .seafood-image:hover,
+    .express-lunch-image:hover,
+    .combo-dinner-image:hover,
+    .kids-menu-image:hover,
+    .desserts-image:hover,
+    .side-orders-image:hover,
+    .street-tacos-image:hover {
+        transform: none; /* Remove hover effect */
+    }
+
     .menu-placeholder, 
     .yucatan-specials-image,
     .lunch-specialties-image,
