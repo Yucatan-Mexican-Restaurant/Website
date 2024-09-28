@@ -1,4 +1,9 @@
 /*all body*/
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -6,6 +11,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    padding-bottom: 30rem;
+    box-sizing: inherit;
 }
 
 /*all nav bar*/
@@ -101,23 +111,6 @@ nav li:first-child {
     text-align: left;
 }
 
-
-@media (max-width: 800px) {
-    .hideOnMobile {
-        display: none;
-    }
-
-    .menu-button {
-        display: block;
-    }
-}
-
-@media (max-width: 400px) {
-    .sidebar {
-        width: 100%;
-    }
-}
-
 .site-footer {
     background-image: url('woodfooter3.jpg');
     background-position: center center;
@@ -125,7 +118,7 @@ nav li:first-child {
     color: white;
     padding: 150px 0;
     border-top: 1px solid #444;
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
@@ -178,6 +171,10 @@ nav li:first-child {
     border-radius: 10px;
 }
 
+.mobile-location {
+    display: none;
+}
+
 .info-box {
     position: absolute;
     top: 180px;
@@ -219,4 +216,97 @@ nav li:first-child {
 
 .directions-link:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+
+    nav {
+        width: 100%;
+        /* Full width */
+        height: 150px;
+        display: flex;
+        /* Flexbox layout */
+        justify-content: space-between;
+        /* Space between logo and nav items */
+        align-items: center;
+        /* Center items vertically */
+    }
+
+    nav a {
+        height: 100%;
+        font-size: 30px;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+    }
+
+    /* Position logo on the left */
+    .logo-image {
+        height: 120px;
+        width: 300px;
+        margin-right: auto;
+
+        /* Pushes nav items to the right */
+    }
+
+    .site-footer {
+        width: 100%;
+        /* Reduced padding for mobile */
+        text-align: center;
+        /* Center footer content */
+    }
+
+    .footer-text {
+        font-size: 50px;
+        /* Smaller font size for footer text */
+
+    }
+
+    .map-container iframe {
+        height: 1100px;
+    }
+
+    .info-box {
+        display: none
+    }
+
+    .mobile-location {
+        display: block;
+        padding-left: 30px;
+    }
+
+    .mobile-directions-link svg {
+        width: 40px;
+        /* Adjust as needed */
+        height: 40px;
+        /* Adjust as needed */
+    }
+
+    .mobile-directions-link {
+        align-items: center;
+        margin-top: 10px;
+        padding: 10px 20px;
+        text-decoration: underline;
+        color: black;
+        font-size: 2em;
+        font-weight: bold;
+        border-radius: 5px;
+        font-weight: bold;
+        display: flex;
+
+    }
+
+    .mobile-directions-link:hover {
+        text-decoration: none;
+    }
+
+    .mobile-address {
+        font-weight: lighter;
+    }
+
+    .mobile-buisness-hours {
+        font-weight: lighter;
+    }
 }
