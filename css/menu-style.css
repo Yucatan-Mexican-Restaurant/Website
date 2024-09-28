@@ -161,7 +161,7 @@ nav li:first-child {
 .top-center-text {
     text-align: center;
     position: absolute;
-    top: 60px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -502,6 +502,10 @@ nav li:first-child {
         margin-right: auto;
 
         /* Pushes nav items to the right */
+    }
+
+    .top-center-text {
+        top: 60px;
     }
 
     .menu-container {
