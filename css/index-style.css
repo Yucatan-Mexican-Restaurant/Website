@@ -1,7 +1,6 @@
 body.index-page {
     margin: 0;
     min-height: 100vh;
-    background-image: url(laptop.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -9,14 +8,6 @@ body.index-page {
 
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
 nav {
     height: 100px;
@@ -61,78 +52,13 @@ nav li:first-child {
     height: 70px;
 }
 
-.call-button {
-    background-color: red;
-    color: white;
-    padding: 10px 30px;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-    margin-top: -10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.call-button:hover {
-    background-color: darkred;
-}
-
-
-
-.sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0;
-}
-
-.sidebar li {
-    width: 100%;
-    margin: 0;
-}
-
-.sidebar a {
-    width: 100%;
-    text-align: left;
-}
-
-
-@media (max-width: 800px) {
-    .hideOnMobile {
-        display: none;
-    }
-
-    .menu-button {
-        display: block;
-    }
-}
-
-@media (max-width: 400px) {
-    .sidebar {
-        width: 100%;
-    }
-}
 
 /*index page*/
 .image-placeholder {
     position: relative;
     width: 100%;
     background-color: #b9a7a7;
-    /* Full width */
+    /* Background color */
     height: 50vh;
     /* Half of the viewport height */
     display: flex;
@@ -141,17 +67,26 @@ nav li:first-child {
     overflow: hidden;
     /* Ensures that the image fits within the div */
     margin-bottom: 20px;
-    /* Optional: Add some space below the placeholder */
+    /* Space below the placeholder */
 }
 
 .image-placeholder img {
+    position: absolute;
+    /* Positioning to allow for proper coverage */
+    top: 50%;
+    /* Center the image vertically */
+    left: 50%;
+    /* Center the image horizontally */
     width: 100%;
     /* Makes sure the image scales with the container */
-    height: auto;
-    /* Maintains aspect ratio */
+    height: 100%;
+    /* Makes sure the image fills the container */
     object-fit: cover;
     /* Ensures the image covers the whole container */
+    transform: translate(-50%, -50%);
+    /* Centers the image */
 }
+
 
 .menu-button1 {
     position: absolute;
@@ -207,13 +142,11 @@ nav li:first-child {
     margin-left: 40px;
 }
 
-.second-row {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+.first-row-wrapper {
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
     padding: 0 20px;
-    margin-left: 40px;
-    margin-bottom: 100px;
+    /* Optional: Add padding to the sides */
 }
 
 .specials-dish {
@@ -222,7 +155,7 @@ nav li:first-child {
     text-align: center;
     border-radius: 5px;
     width: 90%;
-    max-width: 300px;
+    max-width: 100%;
 }
 
 .specials-dish-day {
@@ -314,10 +247,6 @@ nav li:first-child {
     transition: transform 0.3s ease;
 }
 
-.specials-dish-placeholder:hover {
-    transform: scale(1.1);
-}
-
 .specials-dish-name {
     font-family: "Oswald";
     color: black;
@@ -330,8 +259,6 @@ nav li:first-child {
     color: red;
     font-weight: bold;
 }
-
-
 
 .site-footer {
     background-image: url('woodfooter3.jpg');
@@ -384,4 +311,124 @@ nav li:first-child {
     margin-left: 20px;
     margin-right: 5px;
     mix-blend-mode: multiply;
+}
+
+@media (max-width: 1000px) {
+
+    nav {
+        width: 100%;
+        /* Full width */
+        height: 150px;
+        display: flex;
+        /* Flexbox layout */
+        justify-content: space-between;
+        /* Space between logo and nav items */
+        align-items: center;
+        /* Center items vertically */
+    }
+
+    nav a {
+        height: 100%;
+        font-size: 30px;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+    }
+
+    .call-button {
+        background-color: red;
+        color: white;
+        padding: 10px 30px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+        margin-top: -10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .call-button:hover {
+        background-color: darkred;
+    }
+
+    /* Position logo on the left */
+    .logo-image {
+        height: 120px;
+        width: 300px;
+        margin-right: auto;
+
+        /* Pushes nav items to the right */
+    }
+
+    .image-placeholder {
+        height: 30vh;
+    }
+
+    .image-placeholder img {
+        height: 100%;
+    }
+
+    .menu-button1 {
+        height: 50px;
+        font-size: 2em;
+    }
+
+    .first-row {
+        grid-template-columns: repeat(5, 1fr);
+        /* Maintain the grid layout */
+        min-width: 100%;
+        /* Set a minimum width to enable scrolling */
+    }
+
+    .specials-dish-name {
+        font-size: 30px;
+    }
+
+    .specials-dish-price {
+        font-size: 30px;
+    }
+
+    .specials-dish-day {
+        font-size: 50px;
+    }
+
+    .daily-title {
+        font-size: 80px;
+    }
+
+    .daily-time {
+        font-size: 45px;
+    }
+
+    .specials-dish-placeholder,
+    .specials-dish-monday-image,
+    .specials-dish-tuesday-image,
+    .specials-dish-wednesday-image,
+    .specials-dish-thursday-image,
+    .specials-dish-friday-image {
+        height: 300px;
+        width: 400px;
+        /* Further increase height on mobile */
+        font-size: 22px;
+        /* Increase font size for better readability */
+    }
+
+    .site-footer {
+        width: 100%;
+        /* Reduced padding for mobile */
+        text-align: center;
+        /* Center footer content */
+        position: relative;
+    }
+
+    .footer-text {
+        font-size: 50px;
+        /* Smaller font size for footer text */
+    }
 }
