@@ -1,12 +1,7 @@
-body.index-page {
-    margin: 0;
-    min-height: 100vh;
-    background-image: url(laptop.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+/*all body*/
+html {
+    height: 100%;
+    box-sizing: border-box;
 }
 
 body {
@@ -16,12 +11,18 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    padding-bottom: 30rem;
+    box-sizing: inherit;
 }
 
+/*all nav bar*/
 nav {
     height: 100px;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255);
     color: black;
     font-weight: bold;
     display: flex;
@@ -62,7 +63,28 @@ nav li:first-child {
 }
 
 
+.call-button {
+    background-color: red;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    margin-top: -10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
+.call-button:hover {
+    background-color: darkred;
+}
+
+
+/*all sidebar*/
 .sidebar {
     position: fixed;
     top: 0;
@@ -91,235 +113,6 @@ nav li:first-child {
 }
 
 
-@media (max-width: 800px) {
-    .hideOnMobile {
-        display: none;
-    }
-
-    .menu-button {
-        display: block;
-    }
-}
-
-@media (max-width: 400px) {
-    .sidebar {
-        width: 100%;
-    }
-}
-
-/*index page*/
-.image-placeholder {
-    position: relative;
-    width: 100%;
-    /* Full width */
-    height: 50vh;
-    /* Half of the viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    /* Ensures that the image fits within the div */
-    margin-bottom: 20px;
-    /* Optional: Add some space below the placeholder */
-}
-
-.image-placeholder img {
-    width: 100%;
-    /* Makes sure the image scales with the container */
-    height: auto;
-    /* Maintains aspect ratio */
-    object-fit: cover;
-    /* Ensures the image covers the whole container */
-}
-
-.menu-button1 {
-    position: absolute;
-    bottom: 10px;
-    /* Adjust this value to control how close to the bottom the button appears */
-    background-color: red;
-    /* Example button color */
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10%;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.menu-button1:hover {
-    background-color: darkred;
-}
-
-.daily-specials-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    align-items: center;
-    gap: 20px 40px;
-    margin-top: 150px;
-    border: 1px solid black;
-}
-
-.specials-dish:nth-child(6) {
-    grid-column: 2 / span 2;
-    /* This centers the first item in the second row */
-}
-
-.specials-dish:nth-child(7) {
-    grid-column: 4 / span 2;
-    /* This centers the second item in the second row */
-}
-
-.specials-dish {
-    text-align: center;
-    border-radius: 5px;
-    border: 1px solid black;
-}
-
-
-.specials-dish-placeholder {
-    width: 325px;
-    height: 220px;
-    background-color: #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 13px;
-    transition: transform 0.3s ease;
-}
-
-.specials-dish-placeholder:hover {
-    transform: scale(1.1);
-}
-
-.specials-dish-name {
-    font-size: 16px;
-}
-
-
-
-/* menu */
-.top-center-text {
-    text-align: center;
-    position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    width: 100%;
-    margin-top: 60px;
-}
-
-.top-center-text h1 {
-    font-size: 50px;
-    font-weight: bold;
-    color: #e72a2a;
-}
-
-
-/*menu*/
-.menu-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    align-items: center;
-    gap: 20px 40px;
-    margin-top: 150px;
-    border: 1px solid black;
-
-}
-
-.menu-dish {
-    text-align: center;
-    border-radius: 5px;
-    border: 1px solid black;
-}
-
-
-.menu-placeholder {
-    width: 325px;
-    height: 220px;
-    background-color: #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 13px;
-    transition: transform 0.3s ease;
-}
-
-.menu-placeholder:hover {
-    transform: scale(1.1);
-}
-
-.menu-name {
-    font-size: 16px;
-
-}
-
-/*all*/
-.call-button {
-    background-color: red;
-    color: white;
-    padding: 10px 30px;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-    margin-top: -10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.call-button:hover {
-    background-color: darkred;
-}
-
-.menu-container {
-    flex: 1;
-    padding: 80px;
-}
-
-/*menu*/
-.notice {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 20px;
-    /* Adjust for desired spacing inside the notice */
-    text-align: center;
-    /* Center align text */
-    margin-top: 20px;
-    /* Space above the notice */
-    border-radius: 5px;
-    max-width: 80%;
-    /* Limits the width of the notice */
-    margin-left: auto;
-    /* Center align the notice horizontally */
-    margin-right: auto;
-    /* Center align the notice horizontally */
-    line-height: 1.5;
-    /* Adjust line height for better readability */
-}
-
-.notice p {
-    margin: 0;
-    color: #333;
-    font-size: 16px;
-}
-
 /*all footer*/
 .site-footer {
     background-image: url('woodfooter3.jpg');
@@ -328,7 +121,7 @@ nav li:first-child {
     color: white;
     padding: 150px 0;
     border-top: 1px solid #444;
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
@@ -374,77 +167,7 @@ nav li:first-child {
     mix-blend-mode: multiply;
 }
 
-/*lacation*/
-.map-container iframe {
-    width: 100%;
-    height: 800px;
-    border: 1px solid black;
-    border-radius: 10px;
-}
 
-.info-box {
-    position: absolute;
-    top: 180px;
-    right: 60px;
-    background-color: white;
-    border: 1px solid #333;
-    padding: 20px;
-    margin: 20px auto;
-    width: 300px;
-    height: 600px;
-    text-align: center;
-    z-index: 10;
-}
-
-.info-box h2 {
-    margin: 0 0 10px 0;
-    font-size: 16px;
-    color: black
-}
-
-.info-box p {
-    margin: 0 0 10px 0;
-    font-size: 16;
-    color: black
-}
-
-.directions-link {
-    display: inline-block;
-    align-items: center;
-    margin-top: 10px;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: black;
-    font-size: 1.2em;
-    font-weight: bold;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.directions-link:hover {
-    text-decoration: underline;
-}
-
-/*menu items dish*/
-.image-placeholder {
-    width: 100%;
-    /* Full width of the page */
-    height: 68vh;
-    /* 33% of the viewport height */
-    background-color: #ccc;
-    /* Gray background as a placeholder */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: #666;
-    text-transform: uppercase;
-    box-sizing: border-box;
-}
-
-.image-placeholder::before {
-    content: "Image Placeholder";
-}
 
 .menu-title {
     text-align: center;
@@ -479,6 +202,7 @@ nav li:first-child {
     font-family: "Oswald";
     font-size: 1.5em;
     color: #555;
+    padding-bottom: 40px;
 }
 
 .dots {
@@ -548,113 +272,107 @@ p {
 }
 
 
+@media (max-width: 1000px) {
 
-/* Catering */
-.image-placeholder-catering {
-    width: 100%;
-    /* Full width */
-    height: 60.33vh;
-    /* 33.33% of the viewport height */
-    background-color: #ccc;
-    /* Gray background for placeholder */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    /* Add space below the placeholder */
-}
+    nav {
+        width: 100%;
+        /* Full width */
+        height: 150px;
+        display: flex;
+        /* Flexbox layout */
+        justify-content: space-between;
+        /* Space between logo and nav items */
+        align-items: center;
+        /* Center items vertically */
+    }
 
-.image-placeholder-catering::before {
-    content: "Catering";
-    font-size: 2em;
-    color: #555;
-}
+    nav a {
+        height: 100%;
+        font-size: 30px;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+    }
 
-.catering-container {
-    text-align: center;
-    padding: 20px;
+    /* Position logo on the left */
+    .logo-image {
+        height: 120px;
+        width: 300px;
+        margin-right: auto;
 
-}
+        /* Pushes nav items to the right */
+    }
 
-.catering-title {
-    font-family: "Alfa Slab One";
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 100px;
-    color: red;
-}
+    .menu-title {
+        font-size: 100px;
+    }
 
-.catering-item {
-    font-family: "Oswald";
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
-    text-align: center;
-    margin-bottom: 200px;
-}
+    .menu-description {
+        font-size: 57px;
+        padding-bottom: 70px;
+    }
 
-.catering-item.item-left {
-    flex-direction: row;
-}
+    .menu-item {
+        font-size: 57px;
+    }
 
-.catering-item.item-right {
-    flex-direction: row-reverse;
-}
+    .menu-price {
+        font-size: 57px;
+    }
 
-.catering-image {
-    width: 30%;
-    max-width: 300px;
-    margin: 0 20px;
-}
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-.catering-details {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
+    body {
+        display: flex;
+        flex-direction: column;
+    }
 
-.catering-header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 10px;
-}
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        /* Ensure wrapper takes full height of viewport */
+    }
 
-.catering-item-name {
-    font-size: 1.5em;
-    font-weight: bold;
-}
+    header {
+        background: #f8f9fa;
+        padding: 20px;
+    }
 
-.catering-price {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-left: 10px;
-}
+    main {
+        flex: 1;
+        /* This allows main to expand */
+        padding: 20px;
+    }
 
-.catering-dots {
-    flex-grow: 1;
-    border-bottom: 3px dotted;
-    margin: 0 10px;
-    height: 1px;
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    align-self: stretch;
-    position: relative;
-    top: 25px;
-    /* Ensures the dots fill the space */
-}
+    .column-menu-item {
+        font-size: 2.5em;
+    }
 
-.catering-description {
-    font-size: 1.2em;
-    color: #555;
-    margin-top: 5px;
-}
+    .column-menu-price {
+        font-size: 2.5em;
+    }
 
-.catering-food-title {
-    font-family: "Alfa Slab One";
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-bottom: 40px;
+    .column-menu-description {
+        font-size: 2em;
+    }
+
+    .site-footer {
+        width: 100%;
+        /* Reduced padding for mobile */
+        text-align: center;
+        /* Center footer content */
+
+    }
+
+    .footer-text {
+        font-size: 50px;
+        /* Smaller font size for footer text */
+    }
 }
