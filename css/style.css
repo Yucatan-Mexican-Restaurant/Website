@@ -238,6 +238,7 @@ p {
     font-size: 1.5em;
     font-weight: bold;
     vertical-align: bottom;
+    padding-bottom: 40px;
     /* Align item text to the bottom */
 }
 
@@ -247,6 +248,7 @@ p {
     font-size: 1.5em;
     font-weight: bold;
     vertical-align: bottom;
+    padding-bottom: 40px;
 
     /* Align price text to the bottom */
 }
@@ -257,6 +259,7 @@ p {
     color: #555;
     display: block;
     margin-top: 0px;
+    padding-bottom: 40px;
     /* Optional: Add space between the price and description */
 }
 
